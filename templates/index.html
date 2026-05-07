@@ -1,0 +1,28 @@
+<!-- create a simple shopping list UI with:
+1. heading
+2. input field
+3. add button
+4. display shopping items using Flask template loop
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body>
+    <h1>Shopping List</h1>
+    <form action="/add" method="POST">
+        <input type="text" name="item" placeholder="Enter shopping item" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

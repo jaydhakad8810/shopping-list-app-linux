@@ -1,0 +1,16 @@
+{
+    "name": "kolhapuri.pure.veg",
+    "description": "Kolhapuri Pure Veg Restaurant Ordering App",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Kolhapuri Pure Veg",
+    "hooks": {
+        "kolhapuri": {
+            "apparmor": "kolhapuri.apparmor",
+            "desktop": "kolhapuri.desktop",
+            "qml-import": "."
+        }
+    },
+    "version": "@CLICK_VERSION@",
+    "maintainer": "Developer <developer@example.com>",
+    "framework": "ubuntu-sdk-20.04"
+}

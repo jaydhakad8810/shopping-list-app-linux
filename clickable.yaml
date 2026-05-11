@@ -1,0 +1,42 @@
+## Clickable configuration for Kolhapuri Pure Veg restaurant app
+## Run with: clickable desktop  (for desktop testing)
+## Run with: clickable          (to build for Ubuntu Touch device)
+
+spec: 2
+
+# App metadata
+app: kolhapuri.pure.veg
+version: 1.0.0
+revision: 1
+
+# Build type for QML-only app
+build: qmake
+
+# Qt project file
+build_args:
+  - restaurantordering.pro
+
+# Architecture (multi-arch for both armhf and amd64)
+arch: all
+
+# Image to use for building
+image_setup:
+  run:
+    - apt-get install -y qtdeclarative5-dev
+
+# Source files to include
+build_dir: build
+
+# QML import path for Ubuntu.Components
+env_vars:
+  QML2_IMPORT_PATH: /usr/lib/x86_64-linux-gnu/qt5/qml
+
+# Desktop testing mode uses host display
+desktop:
+  image: clickable/ubuntu-sdk:20.04-armhf
+  
+# Files to install on device
+install_files:
+  - assets
+
+# Restrict to supported architectures

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Kolhapuri Pure Veg
+Comment=Restaurant Ordering App
+Exec=qmlscene %U qml/Main.qml
+Icon=assets/icon.png
+Terminal=false
+Type=Application
+Categories=Utility;
